@@ -1,0 +1,18 @@
+{
+	"server": {
+		"type": "meilisearch",
+		"host": "https://meilisearch-production-be57.up.railway.app/",
+		"key": "Milan@4805"
+	},
+	"batchLimit": 100,
+	"reindexOnStart": false,
+	"collections": {
+		"products": {
+			"filter": {
+				"status": "published",
+                "isActive": true
+			},
+			"fields": ["title", "mainImage", "tags", "description", "price", "subtitle", "slug", "properties"]
+		}
+	}
+}
